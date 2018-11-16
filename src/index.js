@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Fellows from './components/Fellows';
+import FellowContainer from './containers/fellows';
 
 import './ytili-spa.css';
 
 ReactDOM.render(
-  <Fellows />,
+  <FellowContainer />,
   document.getElementById( 'ytili-spa' )
 );
 

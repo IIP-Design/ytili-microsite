@@ -1,5 +1,8 @@
 # Project Dependencies #
 node_modules/
 
+# Fellows Data Files #
+data/
+
 # Development Build #
 dist/ytili.js
