@@ -8,29 +8,27 @@ class FellowContainer extends Component {
   constructor( props ) {
     super( props );
     this.state = {
-      // data: '',
+      data: '',
       cities: ''
     };
   }
 
   componentDidMount() {
     const dataObj = getData( twentyEighteen );
-    const cityObjs = getCities( dataObj );
-
-    console.log( cityObjs );
+    const cityArr = getCities( dataObj );
 
     this.setState( {
-      // data: dataObj,
-      cities: cityObjs
+      data: JSON.parse( dataObj ),
+      cities: cityArr
     } );
   }
 
   render() {
-    const { cities } = this.state;
+    const { cities, data } = this.state;
 
     return (
       <div className="ytili-fellows">
-        <Fellows city={ cities } />
+        <Fellows cities={ cities } data={ data } />
       </div>
     );
   }
