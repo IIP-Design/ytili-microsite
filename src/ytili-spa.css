@@ -1,0 +1,28 @@
+.ytili-section-fellows-city {
+  margin-top: 3em;
+}
+
+.ytili-section-header {
+  color: #00ccff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ytili-grid-section {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.ytili-grid-item,
+.ytili-mentors-list {
+  font-family: 'Verdana', 'Geneva', sans-serif;
+}
+
+.ytili-grid-image {
+  max-width: 100%;
+}
+
+.ytili-grid-meta {
+  margin-top: 1em;
+}
