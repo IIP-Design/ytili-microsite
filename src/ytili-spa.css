@@ -5,6 +5,7 @@
 .ytili-section-header {
   color: #00ccff;
   font-family: 'Roboto', sans-serif;
+  margin-top: 2em;
 }
 
 .ytili-grid-section {
@@ -25,4 +26,16 @@
 
 .ytili-grid-meta {
   margin-top: 1em;
+}
+
+@media screen and (max-width: 860px) {
+  .ytili-grid-section {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ytili-grid-section {
+    grid-template-columns: 100%;
+  }
 }
