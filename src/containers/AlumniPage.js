@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import FellowsContainer from '../containers/FellowsContainer';
-import Button from './Button';
+import FellowsContainer from './FellowsContainer';
+import Button from '../components/Button';
 
 class AlumniPage extends Component {
   constructor( props ) {
     super( props );
     this.state = {
-      year: 2017
+      year: 2018
     };
 
     this.setYear = this.setYear.bind( this );
@@ -29,7 +29,7 @@ class AlumniPage extends Component {
         <h1 className="ytili-tab-header">
           { 'Meet The ' }
           { year }
-          { ' YTILI Fellows' }
+          { ' YTILI Fellows:' }
         </h1>
         <FellowsContainer year={ year } />
       </section>
