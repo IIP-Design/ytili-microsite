@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { number } from 'prop-types';
 
 import twentyEighteen from '../data/2018.json';
+import twentySeventeen from '../data/2017test.json';
 import GridSection from '../components/GridSection';
 
 import {
@@ -18,7 +20,26 @@ class FellowsContainer extends Component {
   }
 
   componentDidMount() {
-    const dataObj = getData( twentyEighteen );
+    const { year } = this.props;
+    this.showAlumni( year );
+  }
+
+  componentDidUpdate( prevProps ) {
+    const { year } = this.props;
+    if ( prevProps.year !== year ) {
+      this.showAlumni( year );
+    }
+  }
+
+  showAlumni( year ) {
+    let dataSet;
+    if ( year === 2017 ) {
+      dataSet = twentySeventeen;
+    } else {
+      dataSet = twentyEighteen;
+    }
+
+    const dataObj = getData( dataSet );
     const cityArr = getCities( dataObj );
 
     this.setState( {
@@ -29,17 +50,24 @@ class FellowsContainer extends Component {
 
   render() {
     const { cities, data } = this.state;
-    const cityList = cities;
     const cityData = data.city ? data.city : {};
 
     return (
       <div className="ytili-fellows">
-        { cityList.map( city => (
-          <GridSection city={ cityData[city].displayName } fellows={ getFellows( data, city ) } mentors={ getMentors( data, city ) } />
+        { cities.map( city => (
+          <GridSection
+            city={ cityData[city].displayName }
+            fellows={ getFellows( data, city ) }
+            mentors={ getMentors( data, city ) }
+          />
         ) ) }
       </div>
     );
   }
 }
+
+FellowsContainer.propTypes = {
+  year: number
+};
 
 export default FellowsContainer;

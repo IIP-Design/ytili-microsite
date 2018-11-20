@@ -19,7 +19,7 @@ export const getFellows = ( input, city ) => {
 
 export const getMentors = ( input, city ) => {
   const cities = input.city;
-  const mentorsObj = cities[city].mentors;
+  const mentorsObj = cities[city].mentors ? cities[city].mentors : [];
   const mentorsArr = [];
 
   mentorsObj.forEach( ( mentor ) => {

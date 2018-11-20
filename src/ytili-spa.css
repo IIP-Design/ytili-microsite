@@ -1,3 +1,11 @@
+.ytili-button {
+  background-color: #145571;
+  color: #FFFFFF;
+  font-size: 1em;
+  margin-right: 1em;
+  padding: .5em 2.5em;
+}
+
 .ytili-section-fellows-city {
   margin-top: 3em;
 }
@@ -6,6 +14,12 @@
   color: #00ccff;
   font-family: 'Roboto', sans-serif;
   margin-top: 2em;
+}
+
+.ytili-tab-header {
+  color: #145571;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1em;
 }
 
 .ytili-grid-section {

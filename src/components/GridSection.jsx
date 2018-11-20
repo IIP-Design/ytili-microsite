@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { arrayOf, string, object } from 'prop-types';
 
 import GridItem from './GridItem';
@@ -11,10 +11,14 @@ const GridSection = ( { city, fellows, mentors } ) => (
         <GridItem fellow={ fellow } />
       ) ) }
     </section>
-    <h3 className="ytili-section-header">Mentors</h3>
-    <p className="ytili-mentors-list">
-      { mentors }
-    </p>
+    { mentors ? (
+      <Fragment>
+        <h3 className="ytili-section-header">Mentors</h3>
+        <p className="ytili-mentors-list">
+          { mentors }
+        </p>
+      </Fragment>
+    ) : ( ' ' ) }
   </section>
 );
 
