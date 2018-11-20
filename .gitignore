@@ -4,5 +4,8 @@ node_modules/
 # Fellows Data Files #
 data/
 
-# Development Build #
-dist/ytili.js
+# Build Files #
+dist/
+
+# Environmental Variables #
+.env

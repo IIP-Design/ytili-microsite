@@ -27,6 +27,8 @@ module.exports = {
     ]
   },
   output: {
+    library: ['YTILI'],
+    libraryTarget: 'umd',
     path: __dirname,
     publicPath: '/',
     filename: 'dist/ytili.min.js'

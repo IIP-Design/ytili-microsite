@@ -5,9 +5,11 @@ import AlumniPage from './containers/AlumniPage';
 
 import './ytili-spa.css';
 
-ReactDOM.render(
-  <AlumniPage />,
-  document.getElementById( 'ytili-spa' )
-);
+export const ytiliSPA = () => {
+  ReactDOM.render(
+    <AlumniPage />,
+    document.getElementById( 'ytili-spa' )
+  );
+};
 
-module.hot.accept();
+// module.hot.accept();
