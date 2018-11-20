@@ -26,6 +26,7 @@ class AlumniPage extends Component {
       <section className="ytili-alumni-tab">
         <Button callback={ this.setYear } year={ 2018 } />
         <Button callback={ this.setYear } year={ 2017 } />
+        <Button callback={ this.setYear } year={ 2016 } />
         <h1 className="ytili-tab-header">
           { 'Meet The ' }
           { year }

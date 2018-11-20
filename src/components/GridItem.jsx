@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { object } from 'prop-types';
 
 const GridItem = ( { fellow } ) => (
@@ -19,8 +19,12 @@ const GridItem = ( { fellow } ) => (
       <strong>Country: </strong>
       { fellow.country }
       <br />
-      <strong>Company: </strong>
-      { fellow.company }
+      { fellow.company ? (
+        <Fragment>
+          <strong>Company: </strong>
+          { fellow.company }
+        </Fragment>
+      ) : ( ' ' ) }
     </div>
   </div>
 );

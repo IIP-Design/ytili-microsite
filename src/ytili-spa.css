@@ -7,13 +7,12 @@
 }
 
 .ytili-section-fellows-city {
-  margin-top: 3em;
+  margin-bottom: 5em;
 }
 
 .ytili-section-header {
   color: #00ccff;
   font-family: 'Roboto', sans-serif;
-  margin-top: 2em;
 }
 
 .ytili-tab-header {
@@ -35,7 +34,7 @@
 }
 
 .ytili-grid-image {
-  max-width: 100%;
+  width: 100%;
 }
 
 .ytili-grid-meta {

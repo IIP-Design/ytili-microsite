@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { number } from 'prop-types';
 
+import GridSection from '../components/GridSection';
+
 import twentyEighteen from '../data/2018.json';
 import twentySeventeen from '../data/2017.json';
-import GridSection from '../components/GridSection';
+import twentySixteen from '../data/2016.json';
 
 import {
   getData, getCities, getFellows, getMentors
@@ -33,7 +35,9 @@ class FellowsContainer extends Component {
 
   showAlumni( year ) {
     let dataSet;
-    if ( year === 2017 ) {
+    if ( year === 2016 ) {
+      dataSet = twentySixteen;
+    } else if ( year === 2017 ) {
       dataSet = twentySeventeen;
     } else {
       dataSet = twentyEighteen;
