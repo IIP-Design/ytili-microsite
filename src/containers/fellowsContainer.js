@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { number } from 'prop-types';
 
 import twentyEighteen from '../data/2018.json';
-import twentySeventeen from '../data/2017test.json';
+import twentySeventeen from '../data/2017.json';
 import GridSection from '../components/GridSection';
 
 import {
@@ -54,10 +54,11 @@ class FellowsContainer extends Component {
 
     return (
       <div className="ytili-fellows">
-        { cities.map( city => (
+        { cities.map( ( city, index ) => (
           <GridSection
             city={ cityData[city].displayName }
             fellows={ getFellows( data, city ) }
+            key={ Object.values( cities )[index] }
             mentors={ getMentors( data, city ) }
           />
         ) ) }

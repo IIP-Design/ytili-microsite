@@ -8,7 +8,7 @@ const GridSection = ( { city, fellows, mentors } ) => (
     <h2 className="ytili-section-header">{ city }</h2>
     <section className="ytili-grid-section">
       { fellows.map( fellow => (
-        <GridItem fellow={ fellow } />
+        <GridItem fellow={ fellow } key={ fellow.lastname } />
       ) ) }
     </section>
     { mentors ? (
