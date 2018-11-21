@@ -1,0 +1,37 @@
+.ytili {
+
+  &-section{
+
+    &-fellows-city {
+      margin-bottom: 5em;
+    }
+
+    &-header {
+      color: #00ccff;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  &-grid-section {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  &-mentors-list {
+    font-family: 'Verdana', 'Geneva', sans-serif;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .ytili-grid-section {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ytili-grid-section {
+    grid-template-columns: 100%;
+  }
+}

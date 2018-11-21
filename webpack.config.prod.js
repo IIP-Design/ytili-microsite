@@ -1,5 +1,6 @@
 const webpack = require( 'webpack' );
 const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 
 module.exports = {
   entry: './src/index.js',
@@ -16,8 +17,12 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader']
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -43,5 +48,10 @@ module.exports = {
         }
       } )
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin( {
+      filename: 'dist/ytili-spa.css'
+    } )
+  ]
 };

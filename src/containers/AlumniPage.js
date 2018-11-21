@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import FellowsContainer from './FellowsContainer';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 
 class AlumniPage extends Component {
   constructor( props ) {

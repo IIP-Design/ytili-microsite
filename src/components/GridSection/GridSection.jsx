@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { arrayOf, string, object } from 'prop-types';
 
-import GridItem from './GridItem';
+import GridItem from '../GridItem/GridItem';
 
 const GridSection = ( { city, fellows, mentors } ) => (
   <section className="ytili-section-fellows-city">
