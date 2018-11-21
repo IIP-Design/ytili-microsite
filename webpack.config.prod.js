@@ -51,7 +51,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin( {
-      filename: 'dist/ytili-spa.css'
+      filename: 'dist/ytili.css'
     } )
   ]
 };

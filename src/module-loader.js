@@ -5,11 +5,11 @@ const loadModule = () => {
     const css = document.createElement( 'link' );
     css.setAttribute( 'rel', 'stylesheet' );
     css.setAttribute( 'type', 'text/css' );
-    css.setAttribute( 'href', 'https://s3.amazonaws.com/iip-design-local-dev-modules/spas/ytili/ytili-spa.css' );
+    css.setAttribute( 'href', 'https://s3.amazonaws.com/iipdesignmodules.america.gov/microsites/ytili/ytili.css' );
     document.head.appendChild( css );
 
     const script = document.createElement( 'script' );
-    script.src = 'https://s3.amazonaws.com/iip-design-local-dev-modules/spas/ytili/ytili.min.js';
+    script.src = 'https://s3.amazonaws.com/iipdesignmodules.america.gov/microsites/ytili/ytili.min.js';
     script.defer = true;
     document.body.appendChild( script );
 

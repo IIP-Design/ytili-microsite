@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import AlumniPage from './containers/AlumniPage';
 
-import './ytili-spa.scss';
+import './ytili.scss';
 
 export const ytiliSPA = () => {
   ReactDOM.render(
