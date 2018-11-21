@@ -3,7 +3,10 @@ const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    loader: './src/module-loader.js'
+  },
   module: {
     rules: [
       {
@@ -34,9 +37,10 @@ module.exports = {
   output: {
     library: ['YTILI'],
     libraryTarget: 'umd',
+
     path: __dirname,
     publicPath: '/',
-    filename: 'dist/ytili.min.js'
+    filename: 'dist/ytili-[name].min.js'
   },
   optimization: {
     minimizer: [
